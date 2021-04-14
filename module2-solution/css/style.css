@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 150%;
+    font-family: "Times New Roman";
+}
+
+.container {
+    margin: 16px;
+}
+
+.container > .item {
+    float: left;
+    background-color: gray;
+    height: 180px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.container > .item .title {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    font-size: 125%;
+    font-style: italic;
+}
+
+/* Use this and inline-block to make title push dummy text down. */
+/* Another way is to use float:right and margin/padding */
+.container > .item .right-container {
+    text-align: right;
+}
+
+.container :nth-child(1) .title {
+    background-color: pink;
+}
+
+.container :nth-child(2) .title {
+    background-color: brown;
+    color: white;
+}
+
+.container :nth-child(3) .title {
+    background-color: burlywood;
+}
+
+.container > .item > .content {
+    background-color: gray;
+    margin: 10px;
+    font-family: Serif;
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .container > .item {
+        width: 32%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .container > :first-child {
+        margin-left: 0;
+    }
+    
+    .container > :last-child {
+        margin-right: 0;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width:991px) {
+    .container > :nth-child(1) {
+        width: 49%;
+        margin-right: 1%;
+    }
+
+    .container > :nth-child(2) {
+        width: 49%;
+        margin-left: 1%
+    }
+
+    .container > :nth-child(3) {
+        width: 100%
+    }
+}
+
+/* Mobile View */
+@media (max-width:767px) {
+}
