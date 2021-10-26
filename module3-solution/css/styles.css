@@ -1,0 +1,17 @@
+h2 {
+  text-align: center;
+}
+
+.dish {
+  background-color: lightgrey;
+}
+
+#collapse-menu {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  #collapse-menu {
+      background-color: rgb(231, 231, 231);
+  } 
+}
